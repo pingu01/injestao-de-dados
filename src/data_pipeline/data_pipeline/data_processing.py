@@ -14,5 +14,5 @@ def process_data(data):
 def prepare_dataframe_for_insert(df):
     df['data_ingestao'] = datetime.now()
     df['dado_linha'] = df.apply(lambda row: row.to_json(), axis=1)
-    df['tag'] = 'example_tag'
+    df['tag'] = 'distillery_info'
     return df[['data_ingestao', 'dado_linha', 'tag']]
